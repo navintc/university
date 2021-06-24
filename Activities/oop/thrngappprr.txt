@@ -1,0 +1,45 @@
+1)
+a. 1. When a programme is wrritten, there may be complex codes that
+would not needs revisting after creation or they maybe best kept 
+hidden. So in the concept of Abstraction, it is possible to hide
+certain members, yet they can be used by different parts of the
+software by calling the methodically.
+
+  2.with the concept of encapsulation it is possible to wrap members
+inside another classes and functions. This would be helpful to create
+sub members within a class
+
+
+b. 
+
+#include <iostream.h>
+using namespace std;
+
+class vehicle{
+	private:
+		int kmtraveled = 0, chargekm=0, income=0;
+	public:
+		vehicle(){
+			cout<<"Input km traveled: ";
+			cin>>kmtraveled;
+			cout<<"\nInput charge per km: ";
+			cin>>chargekm;
+			calculate();
+		}
+
+		void calulate(){
+			income=kmtraveled*chargekm;
+		}
+
+		void display(){
+			cout>>"Income: ">>income;
+		}
+
+};
+
+int main (){
+	vehicle v1;
+	v1;
+	return 0;
+} 
+
