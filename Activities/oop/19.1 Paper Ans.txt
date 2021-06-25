@@ -1,0 +1,136 @@
+a.
+1. oop is a concept where software is written with the use of
+objects which are created from pre described classes. OOP has 4 main
+sub concepts which are inheritance, polymorphism, abstraction and encapsulation.
+2. Classes are used in OOP to encapsulate certain functions and data. It 
+works more like a group for methods and data. Classes can be extended with 
+more functions and data later in program.
+3. Objects made using classes. Objects of the same class can be used to do
+different things with parameters and derived classes, under the concept of
+polymorphism.
+4. These kinds of members can be accessed from child classes, but they wont
+be usable for other untities like in public members.
+5. Public members can be accessed from anywhere in the code. Usually constructors 
+are written under this type of members in some languages such as c++.
+
+b.
+missing semicolon for class
+no return type for setAmount
+semicolon at setAmmount
+no parameter data type
+
+c.
+
+class Payment{
+	float ammount;
+	public:
+		void setAmount(int x){
+		}
+};
+
+
+2.
+a. Constructers are used to run a set of actions as soon as an object is
+creared. This used to automate important action that every object of a certain 
+class must always run after it is created.
+b. 
+it will be ran after an object is created
+constructors must be a public memeber
+return types cannot be specified to a constructor
+a constructor can have parameters
+
+
+c. 
+
+#include <iostream.h>
+using namespace std;
+
+class cardData{
+	private:
+		int cardnum=0;
+		float loan = 0.0, interestAmount=0.0, interest = 0.0;
+	public:
+		
+		cardData(){
+			cout<<"Input card number";
+			cin>>cardnum;
+			cout<<"Input loan ammount";
+			cin>>loan;
+			cout<<"Input interest rate";
+			cin>>interest;
+			calculate();
+ 
+		}
+
+		~cardData();
+
+		void calulate(){
+			interestAmount = loan * interest /100;
+			cout<<"Interest for "<<cardNum<<" is "<<interestAmount;
+		}
+};
+
+
+int main(){
+	cardData card1;
+	cardData card2;
+
+	return 0;
+}
+
+
+3. 
+
+a.
+
+i. SuperClass can be simply identified as any of the ancesteral classes
+of an child class.
+
+ii. Subclass can be identified as any of child classes of a parent or an
+ancesteral class of an object.
+
+b.
+
+#include <iostream>
+using namespace std;
+
+class guest{
+	private:
+		int guestID=0, guestBill=0;
+	public:
+		guest(){
+			cout<<"Enter guest ID: \n";
+			cin>>guestID;
+			cout<<"Enter guest Bill amount: \n";
+			cin<<guestBill;
+		}
+		~guest();
+		
+};
+
+class foreignGuest: public guest{
+	private:
+		float taxRate=0.0, finalBill=0.0;
+	public:
+		foreignGuest(){
+			cout<<"Input tax rate\n";
+			cin>>taxRate;
+		}
+		void finalBill(){
+			finalBill = guestBill + (guestBill*taxRate/100);
+			printBill();
+		}
+		void printBill(){
+			cout<<"Final Bill: "<<finalBill<<endl;
+
+		}
+
+};
+
+
+int main(){
+	foreignGuest guest1;
+	guest1.finalBill();
+	return 0;
+};
+ 
