@@ -1,13 +1,12 @@
-
-#include <iostream.h>
+#include <iostream>
 using namespace std;
 
 class product{
 	public:
-		int value=0, price=0, quantity=0, taxvalue = 0, price;
+		int value=0, price=0, quantity=0, taxvalue = 0;
 
 		void calculate(){
-			value=price * quantity
+			value=price * quantity;
 		}
 };
 
@@ -30,14 +29,15 @@ class electronic_product: public product{
 
 		void calculate(){
 			taxvalue = value * taxRate / 100;
-			cout<<taxvalue;
+			cout<<"Tax Value:"<<taxvalue;
 		}
 
 };
 
 int main () {
 	electronic_product product1;
-	product1.calculate;
+	product1.product::calculate();
+	product1.calculate();
 	return 0;
 
 };
