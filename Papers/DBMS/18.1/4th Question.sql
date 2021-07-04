@@ -55,3 +55,8 @@ insert into student VALUES
 ("st002", "Kamal", "Maths", "UJ", 101),
 ("st003", "Saman", "Commerce", "UJ", 103);
 
+
+
+
+1. select * from student where stream="biology" 
+2. select * from student where lecturer.lecturername like 'p%';
