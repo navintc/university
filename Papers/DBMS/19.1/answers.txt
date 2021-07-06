@@ -1,0 +1,4 @@
+
+iii)
+
+12) update lecturer set salary=150000 where lecturername="perera"; 

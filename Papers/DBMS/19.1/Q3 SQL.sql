@@ -28,3 +28,9 @@ insert into lecturer VALUES
 ("L101", "victor", "c++", "cd", 150000,"galle"),("L102", "gihan", "statistics", "sd", 125000,"colombo"),
 ("L103", "sanath", "marketing", "md", 180000,"kandy");
 
+
+
+
+
+
+q
