@@ -26,6 +26,10 @@ ALTER TABLE lecturer ADD dno VARCHAR(2);
 -- 5
 ALTER TABLE lecturer ADD FOREIGN KEY (dno) references department(dept_no);
 
+
+
+
+
 -- 6
 
 INSERT into department VALUES
@@ -39,6 +43,10 @@ insert into lecturer VALUES
 ("L101", "victor", "c++", 150000,"galle", "CD"),
 ("L102", "gihan", "statistics", 125000,"colombo", "SD"),
 ("L103", "sanath", "marketing", 180000,"kandy", "MD");
+
+
+
+
 
 
 -- 7
@@ -66,30 +74,48 @@ DELETE FROM lecturer where lec_code="L100";
 DROP TABLE department;
 
 -- 15
--- No, I can not. Lecturer table has a foreign key which is referencing
--- to the department table.
+-- 	No, I can not. Lecturer table has a foreign key which is referencing
+-- 	to the department table.
+
+
+
+
+
 
 -- 16
 SELECT department.dname, lecturer.lec_code, lecturer.specialization, lecturer.salary
 FROM department INNER JOIN lecturer ON lecturer.dno=department.dept_no;
 
+
+
 -- 17
 SELECT AVG(salary) from lecturer;
+
 
 -- 18
 SELECT department.dname from department INNER JOIN lecturer ON department.dept_no=lecturer.dno
 GROUP BY department.dname HAVING SUM(lecturer.salary)>75000;
+
+
 
 -- 19
 SELECT department.dname, count(lecturer.dno) 
 from department INNER JOIN lecturer ON department.dept_no = lecturer.dno 
 GROUP BY department.dname HAVING count(lecturer.dno)>2;
 
+
+
+
+
 -- 20
 SELECT lecturer.lecturername, lecturer.salary, department.dname from
 lecturer INNER JOIN department ON lecturer.dno=department.dept_no WHERE lecturer.address = "Colombo";
 
 -- note: You can't use Group by to simply select data by comparing to stuff.
+
+
+
+
 
 -- 21
 DELIMITER //
@@ -98,10 +124,14 @@ BEGIN
 SELECT lecturername from lecturer where salary BETWEEN valueOne AND valueTwo;
 END//
 
+
 -- Note: @ signs are used in SQL, not in MYSQL. Instead 'IN' is used.
 -- 'AS' is also not used. Delimiter is a must. So is brackets.
 -- DELIMITER must have have space before the symbol you are using (Eg: //)
 -- use `CALL betSalary2(120000, 150000);` to use this 
+
+
+
 
 
 -- 22
@@ -112,3 +142,16 @@ SELECT lecturername from lecturer where salary>valuesal AND lecturername LIKE CO
 END //
 
 --NOTE: A classic CONCAT. 
+
+
+
+
+
+
+
+
+
+
+
+
+-- -------------------------------------------------------------------------Shit.
