@@ -1,0 +1,38 @@
+delimeter //
+CREATE PROCEDURE spInsertProduct (IN barCode int, IN name VARCHAR(32), IN price double, IN quantitiy int)
+	BEGIN
+	IF price > 0 AND quantitiy >= 0 THEN
+	INSERT into product (barcode, PName, price, QuantityInStock)
+	VALUES
+	(barCode, name, price, quantity);
+END IF;
+END//
+
+call spInsertProduct (206, 'bycyvle',3400,7);
+
+
+[11:08 AM] Anjali  Jayasinghe
+DROP TRIGGER IF EXISTS `updateAvailableQuantity`;
+DELIMITER $$CREATE TRIGGER updateAvailableQuan
+AFTER INSERT
+ON saleItem FOR EACH ROW
+BEGIN
+UPDATE product SET
+QuantityInStock = QuantityInStock - OLD.quantity
+where barCode = NEW.barCode;
+END$$
+DELIMITER ;
+
+[11:08 AM] Anjali  Jayasinghe
+DROP PROCEDURE IF EXISTS `spInsertProduct`;
+Delimiter //CREATE PROCEDURE spInsertProduct(IN barCode int,IN name varchar(20),IN price double,IN quantity int)
+BEGIN
+IF price > 0 AND quantity >= 0 THEN
+INSERT INTO product(barCode,PName,price,QuantityInStock)
+VALUES
+(barCode,name,price,quantity);
+END IF;
+END //
+
+
+

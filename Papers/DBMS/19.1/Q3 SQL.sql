@@ -3,8 +3,8 @@ CREATE DATABASE university;
 
 -- 2
 CREATE table department(
-    dept_no varchar(4),
-    dname varchar(8),
+    dept_no varchar(2),
+    dname varchar(16),
     PRIMARY KEY (dept_no)
 );
 
