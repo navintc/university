@@ -13,19 +13,19 @@ CREATE TABLE university (
 );
 
 CREATE TABLE lecturer (
-	lec_code int,
+    lec_code int,
     lecturername VARCHAR(16),
     specialization varchar(16),
-    unicode VARCHAR(4),
+    unicode VARCHAR(2),
     PRIMARY KEY (lec_code),
     FOREIGN KEY (unicode) REFERENCES university(unicode)
 );
 
 CREATE TABLE student (
-	stno varchar(8),
+    stno varchar(8),
     stname varchar(16),
     stream varchar(16),
-    uniCode varchar(4),
+    uniCode varchar(2),
     lec_code int,
     PRIMARY KEY (stno),
     FOREIGN KEY (unicode) REFERENCES university(unicode),
