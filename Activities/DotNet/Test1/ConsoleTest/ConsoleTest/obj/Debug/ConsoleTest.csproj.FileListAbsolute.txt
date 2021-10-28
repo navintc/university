@@ -1,0 +1,6 @@
+D:\Coventry\University\Activities\DotNet\Test1\ConsoleTest\ConsoleTest\bin\Debug\ConsoleTest.exe
+D:\Coventry\University\Activities\DotNet\Test1\ConsoleTest\ConsoleTest\bin\Debug\ConsoleTest.pdb
+D:\Coventry\University\Activities\DotNet\Test1\ConsoleTest\ConsoleTest\obj\Debug\ConsoleTest.csprojAssemblyReference.cache
+D:\Coventry\University\Activities\DotNet\Test1\ConsoleTest\ConsoleTest\obj\Debug\ConsoleTest.csproj.CoreCompileInputs.cache
+D:\Coventry\University\Activities\DotNet\Test1\ConsoleTest\ConsoleTest\obj\Debug\ConsoleTest.exe
+D:\Coventry\University\Activities\DotNet\Test1\ConsoleTest\ConsoleTest\obj\Debug\ConsoleTest.pdb

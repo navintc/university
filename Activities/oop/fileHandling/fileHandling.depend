@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1628322555 source:d:\coventry\university\activities\oop\filehandling\main.cpp
+	<iostream>
+	<fstream>
+

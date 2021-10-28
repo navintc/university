@@ -1,0 +1,16 @@
+D:\Coventry\University\Activities\C#\yolo\bin\Debug\net5.0\yolo.exe
+D:\Coventry\University\Activities\C#\yolo\bin\Debug\net5.0\yolo.deps.json
+D:\Coventry\University\Activities\C#\yolo\bin\Debug\net5.0\yolo.runtimeconfig.json
+D:\Coventry\University\Activities\C#\yolo\bin\Debug\net5.0\yolo.runtimeconfig.dev.json
+D:\Coventry\University\Activities\C#\yolo\bin\Debug\net5.0\yolo.dll
+D:\Coventry\University\Activities\C#\yolo\bin\Debug\net5.0\ref\yolo.dll
+D:\Coventry\University\Activities\C#\yolo\bin\Debug\net5.0\yolo.pdb
+D:\Coventry\University\Activities\C#\yolo\obj\Debug\net5.0\yolo.csprojAssemblyReference.cache
+D:\Coventry\University\Activities\C#\yolo\obj\Debug\net5.0\yolo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coventry\University\Activities\C#\yolo\obj\Debug\net5.0\yolo.AssemblyInfoInputs.cache
+D:\Coventry\University\Activities\C#\yolo\obj\Debug\net5.0\yolo.AssemblyInfo.cs
+D:\Coventry\University\Activities\C#\yolo\obj\Debug\net5.0\yolo.csproj.CoreCompileInputs.cache
+D:\Coventry\University\Activities\C#\yolo\obj\Debug\net5.0\yolo.dll
+D:\Coventry\University\Activities\C#\yolo\obj\Debug\net5.0\ref\yolo.dll
+D:\Coventry\University\Activities\C#\yolo\obj\Debug\net5.0\yolo.pdb
+D:\Coventry\University\Activities\C#\yolo\obj\Debug\net5.0\yolo.genruntimeconfig.cache
