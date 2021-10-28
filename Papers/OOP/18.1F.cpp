@@ -203,6 +203,14 @@
 // 5
     // a
         // i 
+        ofstream newfileOut("XYX.txt", ios:in | ios::out | ios::trunc);
+        newfileOut.seekg(1, ios:beg);
+        newfileOut.close();
+
+        // ii 
+        ifstream newfileIn("PQR.txt");
+    
+
 
 
     // b
@@ -220,7 +228,7 @@
 
             void WriteEmployee (){
 
-                ofstream empOut("employee.txt");
+                ofstream empOut("employee.txt".ios::app);
                 
                 cout<< "enter employee name";
                 cin >> name;

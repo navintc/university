@@ -10,6 +10,111 @@
 
     // b
 
+    #include <iostream>
+    using namespace std;
+
+    class mobileBills{
+        public:
+        float unitPrice = 0.0, finalBill = 0.0;
+        int unitCount = 0;
+
+        void setData(){
+            cout << "Input unit price";
+            cin >> unitPrice;
+            cout << "Input the number of used units";
+            cin >> unitCount;
+        }
+
+        void calculateBill() {
+            if (unitCount<100){
+                unitPrice = unitPrice - (unitPrice * 3 /100);
+            }
+
+            finalBill = unitPrice * unitCount;
+        }
+
+        void outputBill(){
+            cout << "Final Bill: " << finalBill;
+        }
+    };
+
+    int main(){
+        mobileBills obj1;
+        obj1.setData();
+        obj1.calculateBill();
+        obj1.outputBill();
+        return 0; 
+    }
+
+
+
+
+// 2
+//     a
+//     * Inheritance enables the reusability of codes.
+//     * It makes the code more easier to understand and gives a better organization
+//      (lesser space and time complexities)
+//     * Since members and classes can be extended with this feature less storage is
+//     required for programs.
+//     * Inheritance avoids data redundency and duplicity
+
+
+//     b
+
+    #include <iostream>
+    using namespace std;
+
+    class furniture{
+        public:
+            string fcode;
+            float price = 0.0, finalBill = 0.0;
+
+            void inputData(){
+                cout << "Enter furniture Code";
+                cin >> fcode ;
+                cout << "Enter price";
+                cin >> price;
+            }
+    };
+
+    class sofa: public furniture{
+        public:
+            float discountRate = 0.0;
+
+            void inputData(){
+                cout << "Enter sofa discount";
+                cin >> discountRate ;
+            }
+
+            void calculateBill(){
+                finalBill = price - (price * discountRate / 100);
+            }
+
+            void displayBill(){
+                cout << "Final Bill: " << finalBill;
+            }
+    };
+
+
+    int main(){
+
+        sofa item1;
+        sofa item2;
+
+        item1.furniture::inputData();
+        item1.inputData();
+        item1.calculateBill();
+        item1.displayBill();
+
+        item2.furniture::inputData();
+        item2.inputData();
+        item2.calculateBill();
+        item2.displayBill();
+
+        return 0;
+    }
+
+
 
 
 
@@ -96,7 +201,7 @@
                 cout << "Enter student age";
                 cin >> stAge;
 
-                ofstream fileBucketOut = ("student.txt", ios::app);
+                ofstream fileBucketOut ("student.txt", ios::app);
 
                 fileBucketOut << stCode << " " << stAge;
 
@@ -106,7 +211,7 @@
             void readStud(){
                 string lineR;
 
-                ifstream fileBucketIn = ("student.txt");
+                ifstream fileBucketIn ("student.txt");
                 while (getline(fileBucketIn, lineR)){
                     cout << lineR;
                 }
