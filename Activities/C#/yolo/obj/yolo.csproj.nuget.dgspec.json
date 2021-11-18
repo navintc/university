@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Coventry\\University\\Activities\\C#\\yolo\\yolo.csproj": {}
+    "C:\\Users\\Navin 5\\Desktop\\Fuck Files\\Coventry\\University\\Activities\\C#\\yolo\\yolo.csproj": {}
   },
   "projects": {
-    "D:\\Coventry\\University\\Activities\\C#\\yolo\\yolo.csproj": {
+    "C:\\Users\\Navin 5\\Desktop\\Fuck Files\\Coventry\\University\\Activities\\C#\\yolo\\yolo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Coventry\\University\\Activities\\C#\\yolo\\yolo.csproj",
+        "projectUniqueName": "C:\\Users\\Navin 5\\Desktop\\Fuck Files\\Coventry\\University\\Activities\\C#\\yolo\\yolo.csproj",
         "projectName": "yolo",
-        "projectPath": "D:\\Coventry\\University\\Activities\\C#\\yolo\\yolo.csproj",
-        "packagesPath": "C:\\Users\\aser\\.nuget\\packages\\",
-        "outputPath": "D:\\Coventry\\University\\Activities\\C#\\yolo\\obj\\",
+        "projectPath": "C:\\Users\\Navin 5\\Desktop\\Fuck Files\\Coventry\\University\\Activities\\C#\\yolo\\yolo.csproj",
+        "packagesPath": "C:\\Users\\Navin 5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Navin 5\\Desktop\\Fuck Files\\Coventry\\University\\Activities\\C#\\yolo\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\aser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Navin 5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net5.0": {
@@ -57,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
