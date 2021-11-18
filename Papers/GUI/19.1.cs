@@ -64,18 +64,173 @@
 
 // Q2 =============================================================
 
+// c ---------------------------------------------------------
 
 
 
+using System;
+namespace company
+{
+    class Demo
+    {
+        private int _mark;
+        public int Mark
+        {
+            get
+            {
+                return _mark;
+            }
+            set
+            {
+                _mark = value;
+            }
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Demo obj1 = new Demo();
+            obj1.Mark = 10;
+            obj1.printer();
+        }
+    }
+}
 
 
 
+// d ---------------------------------------------------------
+
+namespace encapsulationDemo{
+    class staff{
+        public string sName = "Jagath";
+    }
+
+    class teacher: staff{
+        public string subject = "Science";
+
+        public void funktion1(){
+            Console.WriteLine(sName + " " subject);
+        }
+    }
+
+    class Program{
+        static void Main(string[] args){
+            teacher obj1 = new teacher();
+            obj1.funktion1();
+        }
+    }
+}
 
 
 
+// e --------------------------------------------------------------------
+
+
+using System;
+
+namespace abstractClass
+{
+    abstract class Animal
+    {
+        public abstract void animalSound();
+    }
+
+    class Pig : Animal
+    {
+    public override void animalSound()
+        {
+            Console.WriteLine("The pig says: wee wee");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Pig myPig = new Pig();
+            myPig.animalSound();
+
+        }
+    }
+}
 
 
 
+// Q3 ==================================================================
+
+// a ----------------------------------------------------------------------
+using System;
+
+public class Example
+{
+   public static void Main()
+   {
+      int number1 = 3000;
+      int number2 = 0;
+      try {
+         Console.WriteLine(number1 / number2);
+      }
+      catch (DivideByZeroException) {
+         Console.WriteLine("Division of {0} by zero.", number1);
+      }
+   }
+}
+
+
+// b -------------------------------------------------------------------------
+using System;
+
+namespace CEB {
+    public partial class form1 : Form{
+
+        public float taxRate = 0.0f, unitPrice = 0.0f, billAmm =0.0f, taxAmm =0.0f, totBill = 0.0f;
+        
+        public void btnCalculate_Click(object sender, EventArgs e){
+            if (comboCustomerType.Text == "Domestic"){
+                
+                if (int.Parse(txtUnits.Text) > 100){
+                    unitPrice = 30.0f;
+                    taxRate = 5.0f;
+                } else if (int.Parse(txtUnits.Text) > 50){
+                    unitPrice 30.0f;
+                    taxRate = 5.0f;
+                } else {
+                    unitPrice = 10.0f;
+                    taxRate = 2.0f;
+                }
+
+            } else {
+                if (int.Parse(txtUnits.Text) > 100){
+                    unitPrice = 100.0f;
+                    taxRate = 10.0f;
+
+                } else if (int.Parse(txtUnits.Text)>50){
+                    unitPrice = 50.0f;
+                    taxRate = 8.0f;
+
+                } else{
+                    unitPrice = 20.0f;
+                    taxRate = 5.0f;
+
+                }
+            }
+
+            billAmm = txtUnits * unitPrice;
+            taxAmm = billAmm * taxRate;
+            totBill = billAmm + taxAmm;
+
+            lblBillAmm.Content = billAmm;
+            lblTaxAmm.Content = taxAmm;
+            lblTotBill.Content = totBill;
+        }
+    }
+}
+
+
+// ==================================== END ========================================
 
 
 
