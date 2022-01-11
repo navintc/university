@@ -1,0 +1,55 @@
+<html>
+
+    <head>
+        <title>Reverse</title>
+    </head>
+
+    <body>
+
+        <script type='text/javascript'>
+            function myFunction1(){
+                x = document.getElementById("a").value;
+                y = document.getElementById("b").value;
+              
+                document.getElementById("text1").value = x*y ;
+
+            }
+
+            function myFunction2(){
+                x = document.getElementById("a").value;
+                y = document.getElementById("b").value;
+                
+
+                document.getElementById("text1").value = x/y ;
+
+
+            }
+
+        </script>
+
+        <div>
+
+            <div style="display: flex;"">
+                <p>1st number</p>
+                <input  id ="a" type="text"/>
+
+            </div>
+
+            <br>
+
+            <div style="display: flex;">
+                <p>2st number</p>
+                <input id ="b" type="text"/>
+                
+            </div>
+
+            <div>
+                <input type="button"value="Multiply" onclick="myFunction1()"/>
+                <input type="button" value="Divide" onclick="myFunction2()"/>
+            </div>
+        </div>
+
+        <input type="text" id="text1"/>
+
+    </body>
+</html>

@@ -21,13 +21,16 @@
 
         //public void btnView_Click (object sender, EventArgs e){
             Sqlconnection con = new SqlConnection("ConnectionString");
-
+            
+            string query1 = ("SELECT * FROM Instagram_users")
+            
             con.Open();
+            sqladapt = new SqlDataAdapter(query1, con);
+            
             DataTable dt = new DataTable();
-            con.Close();
-            sqladapt = new SqlDataAdapter("SELECT * FROM Instagram_users", con);
             sqladapt.Fill(dt);
             dataGridView1.DataSource = dt;
+            con.Close();
         }
 
         // e ------------------------------------------
@@ -68,8 +71,8 @@
 
 
 
-using System;
-namespace company
+
+namespace encap
 {
     class Demo
     {
@@ -94,7 +97,6 @@ namespace company
         {
             Demo obj1 = new Demo();
             obj1.Mark = 10;
-            obj1.printer();
         }
     }
 }
@@ -103,7 +105,7 @@ namespace company
 
 // d ---------------------------------------------------------
 
-namespace encapsulationDemo{
+namespace inheritanceDemo{
     class staff{
         public string sName = "Jagath";
     }
@@ -140,7 +142,7 @@ namespace abstractClass
 
     class Pig : Animal
     {
-    public override void animalSound()
+        public override void animalSound()
         {
             Console.WriteLine("The pig says: wee wee");
         }

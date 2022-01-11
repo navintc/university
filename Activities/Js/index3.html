@@ -1,0 +1,25 @@
+<html>
+
+    <head>
+        <title>Reverse</title>
+    </head>
+
+    <body>
+
+        <script type='text/javascript'>
+            x = prompt();
+            z = x.split("");
+            consos = ["a", "e", "i", "o", "u"];
+            count = 0;
+            for (i in z){
+                for (k in consos){
+                    if (z[i] === consos[k]){
+                        count +=1;
+                    }
+                }
+            }
+            console.log(count);
+        </script>
+
+    </body>
+</html>

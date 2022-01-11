@@ -1,0 +1,32 @@
+<html>
+
+    <head>
+        <title>Reverse</title>
+    </head>
+
+    <body>
+
+        <script type='text/javascript'>
+            x = prompt();
+
+            // my way ---------------------------------------------
+            y = x.split(" ");
+            for (i in y){
+                k = y[i][0].toUpperCase() + y[i].substring(1);
+                y[i] = k;
+            }
+            y = y.join(" ");
+            console.log(y);
+
+            //institute -------------------------------------------
+            y = x.split(" ");
+            var newarray1 = [];
+            for (var i = 0; i < array1.length; i++){
+                newarray1.push(array[x].charAt(0).toUpperCase() + y[i].slice(1)); 
+            }
+            console.log(newarray1.join(" "));
+
+        </script>
+
+    </body>m
+</html>
