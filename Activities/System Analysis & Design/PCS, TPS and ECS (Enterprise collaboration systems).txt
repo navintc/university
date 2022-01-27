@@ -1,0 +1,51 @@
+1. 
+*Watchdog system of satellites
+	i. Constantly monitors the state of the satellite and
+	takes inputs from various components.
+
+	ii. The watchdog will control the functionalities of the core satellite
+	and manage its resources in, critical situations and upon deployment.
+
+	iii. The ground station will recieve meta data and the status of the state
+	of main components of the satellite.
+
+	iv. The watchdog will process data taken from sensors to detect harmful
+	solar radiation, digital/analog noises and interfering signals 
+
+
+*Food manufacturing plants
+	
+	i. Takes food ingredients as the inputs
+
+	ii. The system controls the machines to come up with an end
+	product
+
+	iii. Processed edible food products will be the output of the system
+	
+	iv. Prepareing ingedients, cooking certain items and combining products
+	to build an end food product can be taken as the processes of the system.
+
+*ECU of Formula 1 cars
+
+	i. ECU takes data from the components of the F1 car.
+
+	ii. It controls the engine, gearbox, differential,
+	throttle, clutch, energy recovery system (ERS)
+	and the drag reduction system (DRS)
+
+	iii. It processes and transmits vast quantities of data
+	from the race car to the team
+
+	iv. ECU proceses data taken from different comopenents of the car
+	in realtime.
+
+
+2. 
+Bitcoin Transaction Process
+ATM/Banking units
+Company accounting systems
+
+3.
+Video conferencing tools
+Office management softwares
+Event management and claendaring tools
