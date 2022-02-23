@@ -1,5 +1,7 @@
 // Q1
-// Telco.java-
+// a) -------------------
+
+//Telco.java-
 
 public class telco {
     String accNumber;
@@ -32,7 +34,7 @@ public class telco {
        
 }
 
-// Masin.java
+// Main.java
 public class main {
     public static void main(String[] args){
         telco obj1 = new telco("fucer", 1000, 0.5);
@@ -42,3 +44,87 @@ public class main {
         obj1.displayBill();
     }  
 }
+
+
+// b) --------------------
+
+// item.java
+public interface item {
+    final static int item_price= 100;
+}
+
+// order.java
+import java.util.Scanner;
+
+public class order implements item {
+    int quantity_bought;
+    int total;
+    
+    public void order(){
+        System.out.println("Enter quantity: ");
+        Scanner scn = new Scanner(System.in);
+        quantity_bought = scn.nextInt();
+    }
+    
+    public void findBillAmount(){
+        total = quantity_bought * item_price;
+        System.out.println(total);
+    }
+}
+
+//c)-------------------
+package office;
+
+public class employee {
+    int age;
+    String employee;
+    
+    public void displayData(){
+        System.out.println(employee + ", " + age);
+    }
+}
+
+
+
+// Q2 -------------------------------------------------------------------------------------------
+
+/*a) ---------
+
+i. 
+Division by zero error
+Out of range error
+Division by zero errors
+
+ii.
+`Try` section is used to declear algorithms that should be tried of doing and
+if that section fails due to an exception, the `catch` section will be
+excecuted. The `Finally` section is decleared to clean up the code. This 
+section will be executed after excetuting the `try` section or `catch` section.
+
+iii.
+Checked exceptions are added in to try catches to check for expections
+during the compile time. 
+
+Unchecked exceptions will be checked during the run-time of the program.
+These execptions are a sub class of runtime-exceptions.
+
+iv.
+This keyword is used to indicate the exceptions that came up during the
+compile-time or the run-time of a program.
+
+v.
+The variable may not have initiated or the value of the variable may be 
+null. Therefore, it is not possible to calculate the lenght of the string.
+
+try{
+    String name;
+    int lenght = name.lenght();
+}
+catch(NullPointerException e){
+    System.out.println("Value is NULL!" + e.toString());
+}
+
+
+*/
+
+
