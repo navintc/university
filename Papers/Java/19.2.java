@@ -128,5 +128,33 @@ catch(NullPointerException e){
 */
 
 
-// Q3--------------------------------------------------------------------------------------------
-// a)s
+// b)
+
+import java.util.Scanner;
+
+public class stringChars extends Thread {
+    String name;
+    
+    public void set_Name(String name){
+        this.name = name;
+    }
+    
+    public void run(){
+        System.out.println("Enter name: ");
+        Scanner scn = new Scanner(System.in);
+        
+        this.name = scn.nextLine();
+        
+        for(int i=0; i< name.length(); i++){
+            System.out.println(name.charAt(i));
+        }   
+    }
+}
+
+public class main{
+    public static void main(String[] args){
+        stringChars obj2 = new stringChars();
+        obj2.start();
+    }  
+}
+
