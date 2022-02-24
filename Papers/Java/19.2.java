@@ -60,7 +60,7 @@ public class order implements item {
     int quantity_bought;
     int total;
     
-    public void order(){
+    public order(){
         System.out.println("Enter quantity: ");
         Scanner scn = new Scanner(System.in);
         quantity_bought = scn.nextInt();
