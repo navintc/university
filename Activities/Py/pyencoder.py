@@ -1,6 +1,8 @@
+#shuddave used a while loop instead of a for loop
+
 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 encoder = ['z','y','x','w','v','u','t','s','r','q','p','o','n','m','k','j','i','h','g','f','e','d','c','b','a']
-senten = "thunger fuck funker"
+senten = "Our Help Cometh from the lord -Angri Yasmi"
 
 listsen = list(senten)
 
