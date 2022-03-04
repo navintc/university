@@ -158,3 +158,138 @@ public class main{
     }  
 }
 
+
+// Q3 -----------------------------------------------------------------------
+// a)
+
+import java.awt.*;
+import javax.swing.*;
+public class taxFinder extends JFrame{
+    public taxFinder(){
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//make the app exit when X is pressed 
+        //otherwise terminal stays open because JAVA ¯\_(ツ)_/¯
+        setSize(300, 200);
+        setTitle("Tax Finder");
+        
+        JPanel panel1 = new JPanel();
+        getContentPane().add(panel1);
+
+        JLabel lb1 = new JLabel("Payment Account");
+        panel1.add(lb1);
+        
+        JTextField txtAcc = new JTextField(10);
+        panel1.add(txtAcc);
+        
+        JLabel lb2 = new JLabel("Tax Rate");
+        panel1.add(lb2);
+        
+        JTextField txtTax = new JTextField(10);
+        panel1.add(txtTax);
+        
+        JButton calc = new JButton("Calculate");
+        panel1.add(calc);
+        
+        taxFinder c = new taxFinder();
+        calc.addActionListener(c);
+
+    } 
+    public void actionPerformed(ActionEvent e){
+        double output = 0;
+        double pay_amt = Double.parseDouble(txtAcc.getText());
+        double tax_rate = Double.parseDouble(txtTax.getText());
+        
+        output = pay_amt * tax_rate;
+        
+        JOptionPane.showMessageDialog(rootPane, "Your tax amount is " +output);
+           
+    }
+}
+
+
+// b)
+
+// 1)
+String str1 = "Software development";
+// 2)
+str1.replace("d","D");
+// 3)
+System.out.println(str.lenght());
+
+// c)
+
+
+import java.io.*;
+
+class fileRead{
+    public static void main(String[] args){
+        File infile = new File("file.txt");
+        FileReader ins = new FileReader(infile);
+        while ((ch = ins.read())! = -1){
+            System.out.println((byte)ch);
+        }
+        ins.close();
+
+        //-----------------writing:
+
+        String k = "Helleuw";
+        File outfile = new File("file.txt");
+        FileWriter outs = new FileWriter(outfile);
+        outs.write(k);
+        outs.close();
+        
+    }
+}
+
+
+
+// 0---> writing
+
+
+
+// Q4------------------------------------------------------------------------------
+
+// a)
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class DBQuestion {
+    public static void main(String[] args){
+        try {
+            //Creating a connection
+            Class.forName("com.mysql.jdbc.driver");
+            String db_url="jdbc:mysql://localhost/NIBM";
+            Connection con=DriverManager.getConnection(db_url,"root","");
+            //Insert Statement
+
+
+            Scanner scn=new Scanner(System.in);
+            System.out.println("Enter ID: ");
+            String id=scn.next();
+            System.out.println("Enter Name: ");
+            String name=scn.next();
+
+
+            Statement st=con.createStatement();
+            st.executeUpdate("insert into employee(employee_id,employee_name) "
+                    + "values('"+id+"','"+name+"')");
+
+
+            //Reading from database
+            Statement read_st=con.createStatement();
+            ResultSet rs=st.executeQuery("select * from employees");
+            while(rs.next()){
+                id=rs.getString("employee_id");
+                name=rs.getString("employee_name");
+                System.out.println("Id: "+id+" Name: "+name);
+            }
+        } catch (Exception ex) {
+            System.out.println("Something went wrong..");
+        }
+        
+    }
+}
