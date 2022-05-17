@@ -4,6 +4,8 @@ alphabet = ['a','b','c','d','e','f','g','h','i','j','k','m','n','o','p','q','r',
 encoder = ['z','y','x','w','v','u','t','s','r','q','p','o','n','m','k','j','i','h','g','f','e','d','c','b','a']
 senten = "Our Help Cometh from the lord -Angri Yasmi"
 
+senten.lower()
+
 listsen = list(senten)
 
 k=0
@@ -16,7 +18,7 @@ for encodee in listsen:
         flagJ+=1
     k+=1
     
-encodedShitSentence = "".join(listsen)
+    
 print(encodedShitSentence)
 
 encodedShit = list(encodedShitSentence)
