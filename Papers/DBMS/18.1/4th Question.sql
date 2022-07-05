@@ -1,4 +1,4 @@
-CREATE TABLE city(
+ CREATE TABLE city(
 	city varchar(16),
     province varchar(16),
     PRIMARY KEY (city)

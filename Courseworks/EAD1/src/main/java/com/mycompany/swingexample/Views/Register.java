@@ -1,13 +1,14 @@
 
 package com.mycompany.swingexample.Views;
 
-import com.mycompany.swingexample.Controllers.UserController;
+import com.mycompany.swingexample.Controllers.RegisterController;
 import com.mycompany.swingexample.DatabaseConnections;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 public class Register extends javax.swing.JFrame {
@@ -155,34 +156,15 @@ public class Register extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        try {
-            Connection con=DatabaseConnections.connectMySql();
-            String user_name=txtUserName.getText();
-            String email=txtEmail.getText();
-            String phone=txtPassword.getText();
-            String sql_query="insert into users (username, email, password) values('"+user_name+"','"+email+"','"+phone+"')";
-            Statement statement=con.createStatement();
-            statement.executeUpdate(sql_query);
-            JOptionPane.showMessageDialog(rootPane, "Inserted Successfully!!!");
-        } catch (SQLException ex) {
-            System.out.println("Something went wrong.." + ex.getMessage());
-        }
+       
     }//GEN-LAST:event_btnSaveActionPerformed
 
     
     
     
     private void btnMvcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMvcActionPerformed
-//        UserController controller=new UserController(this);
-//        if(controller.insertUser()==true){
-//            JOptionPane.showMessageDialog(rootPane, "Inserted Successfully");
-//        }else{
-//            JOptionPane.showMessageDialog(rootPane, "Something went wrong");
-        
-            
-        login loginScreen = new login();
-        loginScreen.setVisible(true);
-        this.setVisible(false);
+   
+
     }//GEN-LAST:event_btnMvcActionPerformed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
@@ -254,11 +236,11 @@ public class Register extends javax.swing.JFrame {
         this.txtEmail = txtEmail;
     }
 
-    public javax.swing.JTextField getTxtPhone() {
+    public javax.swing.JTextField getTxtPassword() {
         return txtPassword;
     }
 
-    public void setTxtPhone(javax.swing.JTextField txtPassword) {
+    public void setTxtPassword(javax.swing.JTextField txtPassword) {
         this.txtPassword = txtPassword;
     }
 
@@ -266,7 +248,13 @@ public class Register extends javax.swing.JFrame {
         return txtUserName;
     }
 
+    public JButton getBtnMvc() {
+        return btnMvc;
+    }
+
     public void setTxtUserName(javax.swing.JTextField txtUserName) {
         this.txtUserName = txtUserName;
     }
+    
+    
 }

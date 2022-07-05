@@ -3,8 +3,8 @@ package com.mycompany.swingexample.Models;
 
 public class User {
     private String username;
-    private String email;
-    private String phone;
+    private int userid;
+    
 
     public String getUsername() {
         return username;
@@ -14,19 +14,12 @@ public class User {
         this.username = username;
     }
 
-    public String getEmail() {
-        return email;
+    public int getUserId() {
+        return userid;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUSerId(int userid) {
+        this.userid = userid;
     }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+    
 }

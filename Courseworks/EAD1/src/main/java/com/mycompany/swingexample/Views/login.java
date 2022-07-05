@@ -5,7 +5,7 @@
  */
 package com.mycompany.swingexample.Views;
 
-import com.mycompany.swingexample.Controllers.UserController;
+import com.mycompany.swingexample.Controllers.RegisterController;
 import com.mycompany.swingexample.DatabaseConnections;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -14,17 +14,19 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
+import javax.swing.JButton;
+import javax.swing.JTextField;
 
 /**
  *
  * @author Navin 5
  */
-public class login extends javax.swing.JFrame {
+public class Login extends javax.swing.JFrame {
 
     /**
      * Creates new form login
      */
-    public login() {
+    public Login() {
         initComponents();
     }
 
@@ -41,7 +43,7 @@ public class login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtUserName = new javax.swing.JTextField();
         txtPassword = new javax.swing.JTextField();
-        btnSave = new javax.swing.JButton();
+        btnlogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         btnregister = new javax.swing.JButton();
@@ -58,11 +60,11 @@ public class login extends javax.swing.JFrame {
 
         txtPassword.setText("password");
 
-        btnSave.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnSave.setText("Login");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
+        btnlogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnlogin.setText("Login");
+        btnlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
+                btnloginActionPerformed(evt);
             }
         });
 
@@ -96,7 +98,7 @@ public class login extends javax.swing.JFrame {
                             .addComponent(jLabel4))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSave)
+                            .addComponent(btnlogin)
                             .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
@@ -121,7 +123,7 @@ public class login extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnSave)
+                .addComponent(btnlogin)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -132,29 +134,29 @@ public class login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        try {
-            Connection con=DatabaseConnections.connectMySql();
-            String user_name = txtUserName.getText();
-            String password = txtPassword.getText();
-            String sql_query="select password from users where username='"+user_name+"'";
-            
-            Statement statement=con.createStatement();
-//            statement.executeUpdate(sql_query);
-            ResultSet rs = statement.executeQuery(sql_query);
-            System.out.println(rs.next());
-            System.out.println(rs.getString("password"));
-            
-            if (password == rs.getString("password")){
-                JOptionPane.showMessageDialog(rootPane, "Logged in Successfully!!!");
-            }else{
-                JOptionPane.showMessageDialog(rootPane, "Incorrect Password");
-            }
-            
-        } catch (SQLException ex) {
-            System.out.println("Something went wrong.."+ex.getMessage());
-        }
-    }//GEN-LAST:event_btnSaveActionPerformed
+    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
+//        try {
+//            Connection con=DatabaseConnections.connectMySql();
+//            String user_name = txtUserName.getText();
+//            String password = txtPassword.getText();
+//            String sql_query="select password from users where username='"+user_name+"'";
+//            
+//            Statement statement=con.createStatement();
+////            statement.executeUpdate(sql_query);
+//            ResultSet rs = statement.executeQuery(sql_query);
+//            System.out.println(rs.next());
+//            System.out.println(rs.getString("password"));
+//            
+//            if (password == rs.getString("password")){
+//                JOptionPane.showMessageDialog(rootPane, "Logged in Successfully!!!");
+//            }else{
+//                JOptionPane.showMessageDialog(rootPane, "Incorrect Password");
+//            }
+//            
+//        } catch (SQLException ex) {
+//            System.out.println("Something went wrong.."+ex.getMessage());
+//        }
+    }//GEN-LAST:event_btnloginActionPerformed
 
     private void btnregisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregisterActionPerformed
         Register registerScreen = new Register();
@@ -180,26 +182,27 @@ public class login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new login().setVisible(true);
+                new Login().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSave;
+    private javax.swing.JButton btnlogin;
     private javax.swing.JButton btnregister;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -208,4 +211,22 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtnlogin() {
+        return btnlogin;
+    }
+
+    public JButton getBtnregister() {
+        return btnregister;
+    }
+
+    public JTextField getTxtPassword() {
+        return txtPassword;
+    }
+
+    public JTextField getTxtUserName() {
+        return txtUserName;
+    }
+
+
 }
