@@ -7,7 +7,4 @@ Okay, okay.. I was using pasteBin and a huge fan of it. But, you know what? this
 ## Folder Structure
 
  ### Activities : `Things I do to practice`
-  - Vileka's Questions : `Answers to the problems sent by Vileka`
-     - OOP Exams Q4
-  - OOP : `Most of the activities given by Mr. Tharanga`
-     
+ 
